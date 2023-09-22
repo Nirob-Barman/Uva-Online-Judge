@@ -16,7 +16,8 @@ int main()
     for (int i = 1; i < n; i++)
     {
         // Find the next ugly number by choosing the smallest among the multiples
-        ugly[i] = min(ugly[i2] * 2, min(ugly[i3] * 3, ugly[i5] * 5));
+        // ugly[i] = min(ugly[i2] * 2, min(ugly[i3] * 3, ugly[i5] * 5));
+        ugly[i] = min({ugly[i2] * 2, ugly[i3] * 3, ugly[i5] * 5});
         // printf("%d %d - ", i, ugly[i]);
 
         // Update the indexes for multiples of 2, 3, and 5
